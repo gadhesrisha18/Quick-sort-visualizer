@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Sort Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="workspace" aria-label="Quick sort visualizer">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Sorting Visualizer</p>
+          <h1>Quick Sort</h1>
+        </div>
+        <div class="stats" aria-label="Sort statistics">
+          <div>
+            <span id="comparisons">0</span>
+            <small>Comparisons</small>
+          </div>
+          <div>
+            <span id="swaps">0</span>
+            <small>Swaps</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Controls">
+        <button id="randomizeBtn" type="button">Randomize</button>
+        <button id="sortBtn" type="button" class="primary">Start</button>
+        <button id="pauseBtn" type="button">Pause</button>
+        <button id="stepBtn" type="button">Step</button>
+        <button id="resetBtn" type="button">Reset</button>
+
+        <label>
+          <span>Size</span>
+          <input id="sizeInput" type="range" min="8" max="36" value="20">
+        </label>
+        <label>
+          <span>Speed</span>
+          <input id="speedInput" type="range" min="1" max="100" value="55">
+        </label>
+      </section>
+
+      <section class="visual-area">
+        <div id="bars" class="bars" aria-label="Array bars"></div>
+      </section>
+
+      <section class="details">
+        <article>
+          <h2>Current Step</h2>
+          <p id="message">Generate an array, then start the quick sort animation.</p>
+        </article>
+        <article>
+          <h2>Legend</h2>
+          <div class="legend">
+            <span><i class="pivot"></i>Pivot</span>
+            <span><i class="compare"></i>Compare</span>
+            <span><i class="swap"></i>Swap</span>
+            <span><i class="sorted"></i>Sorted</span>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
